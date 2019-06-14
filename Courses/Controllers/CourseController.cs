@@ -1,4 +1,5 @@
 ﻿using Courses.Models;
+using Courses.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -11,7 +12,10 @@ namespace Courses.Controllers
     {
         public ViewResult Index()
         {
-            Course model = new Course(1, "Intro to MVC", "All you need to know about MVC");
+            CourseRepository courseRepo = new CourseRepository();
+
+            var model = courseRepo.GetAll();
+
             return View(model);
         }
     }
