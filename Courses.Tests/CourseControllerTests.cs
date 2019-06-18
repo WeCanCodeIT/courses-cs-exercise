@@ -2,6 +2,7 @@ using Courses.Controllers;
 using Courses.Models;
 using Microsoft.AspNetCore.Mvc;
 using System;
+using System.Collections.Generic;
 using Xunit;
 
 namespace Courses.Tests
@@ -28,7 +29,7 @@ namespace Courses.Tests
         {
             var result = underTest.Index();
 
-            Assert.IsType<Course>(result.Model);
+            Assert.IsType<List<Course>>(result.Model);
         }
 
     }
