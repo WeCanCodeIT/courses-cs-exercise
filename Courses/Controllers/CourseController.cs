@@ -10,10 +10,15 @@ namespace Courses.Controllers
 {
     public class CourseController : Controller
     {
+        IRepository<Course> courseRepo;
+
+        public CourseController(IRepository<Course> courseRepo)
+        {
+            this.courseRepo = courseRepo;
+        }
+
         public ViewResult Index()
         {
-            CourseRepository courseRepo = new CourseRepository();
-
             var model = courseRepo.GetAll();
 
             return View(model);
