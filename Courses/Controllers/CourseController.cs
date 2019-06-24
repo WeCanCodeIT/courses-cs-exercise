@@ -29,9 +29,18 @@ namespace Courses.Controllers
             return View(model);
         }
 
+        [HttpGet]
         public ViewResult Create()
         {
             return View();
+        }
+
+        [HttpPost]
+        public ActionResult Create(Course course)
+        {
+            course.InstructorId = 1;
+            courseRepo.Create(course);  
+            return RedirectToAction("Index");
         }
     }
 }

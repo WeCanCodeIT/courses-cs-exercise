@@ -24,5 +24,11 @@ namespace Courses.Repositories
         {
             return db.Courses.Single(c => c.Id == id);
         }
+
+        public void Create(Course course)
+        {
+            db.Courses.Add(course);
+            db.SaveChanges();
+        }
     }
 }
