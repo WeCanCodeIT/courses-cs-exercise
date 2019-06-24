@@ -30,6 +30,7 @@ namespace Courses
                     Id = 1,
                     Name = "Machine Learning",
                     Description = "Machine learning for humans",
+                    InstructorId = 1
                 },
 
                 new Course()
@@ -37,6 +38,7 @@ namespace Courses
                     Id = 2,
                     Name = "C# for Smarties",
                     Description = "It's all you need to learn it all",
+                    InstructorId = 2
                 },
 
                 new Course()
@@ -44,7 +46,22 @@ namespace Courses
                     Id = 3,
                     Name = "HTML, CSS, JS, oh my!",
                     Description = "OMG, the front end will become your BFF",
+                    InstructorId = 2
                 });
+
+            modelBuilder.Entity<Instructor>().HasData(
+                new Instructor()
+                {
+                    Id = 1,
+                    Name = "Jen"
+                },
+
+                new Instructor()
+                {
+                    Id = 2,
+                    Name = "Ernest"
+                });
+
 
             base.OnModelCreating(modelBuilder);
         }
