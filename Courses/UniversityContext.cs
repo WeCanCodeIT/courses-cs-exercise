@@ -15,7 +15,8 @@ namespace Courses
         {
             var connectionString = "Server=(localdb)\\mssqllocaldb;Database=UniversityDB_062019;Trusted_Connection=True;";
 
-            optionsBuilder.UseSqlServer(connectionString);
+            optionsBuilder.UseSqlServer(connectionString)
+                .UseLazyLoadingProxies();
 
             base.OnConfiguring(optionsBuilder);
         }
