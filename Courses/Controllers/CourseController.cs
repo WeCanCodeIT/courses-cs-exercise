@@ -20,7 +20,12 @@ namespace Courses.Controllers
         public ViewResult Index()
         {
             var model = courseRepo.GetAll();
+            return View(model);
+        }
 
+        public ViewResult Details(int id)
+        {
+            var model = courseRepo.GetById(id);
             return View(model);
         }
     }
