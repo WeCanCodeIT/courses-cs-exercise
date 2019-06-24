@@ -38,7 +38,6 @@ namespace Courses.Controllers
         [HttpPost]
         public ActionResult Create(Course course)
         {
-            course.InstructorId = 1;
             courseRepo.Create(course);  
             return RedirectToAction("Index");
         }
