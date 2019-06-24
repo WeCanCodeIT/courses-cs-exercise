@@ -28,5 +28,10 @@ namespace Courses.Controllers
             var model = courseRepo.GetById(id);
             return View(model);
         }
+
+        public ViewResult Create()
+        {
+            return View();
+        }
     }
 }
