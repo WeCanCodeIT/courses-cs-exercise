@@ -21,6 +21,11 @@ namespace Courses.Repositories
             db.SaveChanges();
         }
 
+        public void Delete(Instructor obj)
+        {
+            throw new NotImplementedException();
+        }
+
         public IEnumerable<Instructor> GetAll()
         {
             return db.Instructors.ToList();

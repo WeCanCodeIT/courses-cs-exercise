@@ -10,7 +10,7 @@ namespace Courses.Repositories
         IEnumerable<T> GetAll();
         T GetById(int id);
         void Create(T obj);
-        //void Delete(T obj);
+        void Delete(T obj);
         //void Update(T obj);
 
     }
