@@ -41,5 +41,12 @@ namespace Courses.Controllers
             courseRepo.Create(course);  
             return RedirectToAction("Index");
         }
+
+        [HttpGet]
+        public ViewResult CreateByInstructorId(int id)
+        {
+            ViewBag.InstructorId = id;
+            return View();
+        }
     }
 }
