@@ -9,13 +9,15 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
+    <link href="~/css/StyleSheet.css" rel="stylesheet" />
+    <link href="~/css/CourseStyle.css" rel="stylesheet" />
     <title>Course</title>
 </head>
 <body>
     <h1>Courses List</h1>
     @foreach (var course in Model)
     {
-        <div>
+        <div class="course-container">
             <p><a href="/Course/Details/@course.Id">@course.Name </a></p>
             <a href="/Course/Delete/@course.Id">Delete</a>
         </div>
