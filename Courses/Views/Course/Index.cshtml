@@ -11,6 +11,7 @@
     <meta name="viewport" content="width=device-width" />
     <link href="~/css/StyleSheet.css" rel="stylesheet" />
     <link href="~/css/CourseStyle.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/79055b70f1.js"></script>
     <title>Course</title>
 </head>
 <body>
@@ -19,7 +20,7 @@
     {
         <div class="course-container">
             <p><a href="/Course/Details/@course.Id">@course.Name </a></p>
-            <a href="/Course/Delete/@course.Id">Delete</a>
+            <a href="/Course/Delete/@course.Id"><i class="fas fa-trash-alt"></i></a>
         </div>
         <hr />
     }
