@@ -11,6 +11,7 @@ The Courses project consists of a SQL database of courses and instructor tables 
 6. add-instructor-model
 7. create-course
 8. add-instructor-controller
+9. course-delete
 
 NOT USED- add-dbContext
 
@@ -42,3 +43,5 @@ NOT USED- add-dbContext
  ## Create Course Branch
  
  ## Add Instructor Controller Branch
+ 
+ ## Course Delete Branch
