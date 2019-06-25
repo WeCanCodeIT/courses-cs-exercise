@@ -21,6 +21,12 @@ namespace Courses.Repositories
             db.SaveChanges();
         }
 
+        public void Delete(Course course)
+        {
+            db.Courses.Remove(course);
+            db.SaveChanges();
+        }
+
         public IEnumerable<Course> GetAll()
         {
             return db.Courses;
