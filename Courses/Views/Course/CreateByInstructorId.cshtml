@@ -1,4 +1,5 @@
 ﻿@model Courses.Models.Course
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 
 @{
     Layout = null;
@@ -9,7 +10,7 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>CreateByInstructorId</title>
+    <title>Create Course for an Instructor</title>
 </head>
 <body>
 
@@ -17,7 +18,7 @@
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="CreateByInstructorId">
+        <form asp-action="Create" method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="Name" class="control-label"></label>
@@ -30,8 +31,7 @@
                 <span asp-validation-for="Description" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="InstructorId" class="control-label"></label>
-                <select asp-for="InstructorId" class ="form-control" asp-items="ViewBag.InstructorId"></select>
+                <select asp-for="InstructorId" type="hidden" class ="form-control" value="@ViewBag.InstructorId" ></select>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-default" />
