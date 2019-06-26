@@ -46,5 +46,16 @@ namespace Courses.Tests
 
             Assert.IsType<ViewResult>(result);
         }
+
+        [Fact]
+        public void Details_Passes_Course_To_View()
+        {
+            var expectedCourse = new Course();
+            courseRepo.GetById(1).Returns(expectedCourse);
+
+            var result = underTest.Details(1);
+
+            Assert.Equal(expectedCourse, result.Model);
+        }
     }
 }
