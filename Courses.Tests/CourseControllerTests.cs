@@ -29,12 +29,14 @@ namespace Courses.Tests
         }
 
         [Fact]
-        public void Index_Passes_CourseModel_To_View()
+        public void Index_Passes_All_Courses_To_View()
         {
+            var expectedCourses = new List<Course>();
+            courseRepo.GetAll().Returns(expectedCourses);
+
             var result = underTest.Index();
 
-            Assert.IsType<List<Course>>(result.Model);
+            Assert.Equal(expectedCourses, result.Model);
         }
-
     }
 }
