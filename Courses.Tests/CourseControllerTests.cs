@@ -5,16 +5,19 @@ using System;
 using System.Collections.Generic;
 using Xunit;
 using NSubstitute;
+using Courses.Repositories;
 
 namespace Courses.Tests
 {
     public class CourseControllerTests
     {
         CourseController underTest;
+        IRepository<Course> courseRepo;
 
         public CourseControllerTests()
         {
-            underTest = new CourseController();
+            courseRepo = Substitute.For<IRepository<Course>>();
+            underTest = new CourseController(courseRepo);
         }
 
         [Fact]
