@@ -38,5 +38,13 @@ namespace Courses.Tests
 
             Assert.Equal(expectedCourses, result.Model);
         }
+
+        [Fact]
+        public void Details_Returns_A_View()
+        {
+            var result = underTest.Details(1);
+
+            Assert.IsType<ViewResult>(result);
+        }
     }
 }
