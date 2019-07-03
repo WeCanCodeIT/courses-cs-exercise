@@ -16,6 +16,13 @@
     <p>Title: <span>@Model.Name</span></p>
     <p>Instructor: <a href="/Instructor/Details/@Model.InstructorId">@Model.Instructor.Name</a></p>
     <p>Description: <span>@Model.Description</span></p>
+    <p>Students:</p>
+    <ol>
+        @foreach (var student in Model.StudentCourses)
+        {
+            <li>@student.Student.Name</li>
+        }
+    </ol>
     <hr />
     <a href="/Course/Index">Return to Courses List</a>
     <hr />
