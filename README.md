@@ -13,6 +13,7 @@ The Courses project consists of a SQL database of courses and instructor tables 
 8. add-instructor-controller
 9. course-delete
 10. controller-tests
+11. add-students
 
 NOT USED- add-dbContext
 
@@ -50,4 +51,12 @@ NOT USED- add-dbContext
  1. Add NSubtitute dependency and a using statement to the test project
  2. In test constructor, use NSubstitute as a Substitute.For the repository
  3. For tests that use the repository, call the method followed by the NSubstitute Returns() method to return the expected value
+ 
+ ## Add Students Branch
+ 1. Add Student model
+ 2. Add StudentCourse model
+ 3. Add navigation properties to Student, Course, and StudentCourse to establish many to many relationship
+ 4. Add Student and StudentCourse seed data
+ 5. Add appropriate migrations and update database
+ 6. Add unordered list of students to Courses details view
  
