@@ -28,10 +28,15 @@ NOT USED- add-dbContext
    * Add parameterless default Course() constructor to satisfy CourseController needs
    * Make pass by setting Name property in constructor
 4. Add Course_Constructor_Sets_Id_On_Course_Model
-   * Add Id property and constructor to Course model
+   * Add Id property to Course model constructor
    * Update previous test with Id parameter
    * Make pass by setting Id property in constructor
 5. Add Course_Constructor_Sets_Description_On_Course_Model
+    * Add Description property to Course model constructor
+    * Update previous tests with Description parameter
+    * Make pass by setting Description property in constructor
+6. Refactor CourseTests and CourseControllerTests
+7. Set up Course Index view to use model object and test that it runs
 
 ## Repository Pattern Branch
 
