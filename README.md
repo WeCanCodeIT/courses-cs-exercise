@@ -18,6 +18,20 @@ The Courses project consists of a SQL database of courses and instructor tables 
 NOT USED- add-dbContext
 
 ## Add Model Test Branch
+1. Add Index_Passes_Course_Model_To_View to CourseControllerTests
+  * Make pass by adding Course Model and updating CourseController
+  * Course model can be empty
+  * Reference Courses.Models in CourseController and CourseControllerTests with using statement 
+2. Add new CourseTests class
+3. Add Course_Constructor_Sets_Name_On_Course_Model
+  * Add Name property and constructor to Course model
+  * Add parameterless default Course() constructor to satisfy CourseController needs
+  * Make pass by setting Name property in constructor
+4. Add Course_Constructor_Sets_Id_On_Course_Model
+  * Add Id property and constructor to Course model
+  * Update previous test with Id parameter
+  * Make pass by setting Id property in constructor
+5. Add Course_Constructor_Sets_Description_On_Course_Model
 
 ## Repository Pattern Branch
 
