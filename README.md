@@ -14,6 +14,7 @@ The Courses project consists of a SQL database of courses and instructor tables 
 9. course-delete
 10. controller-tests
 11. add-students
+12. add-student-to-course
 
 NOT USED- add-dbContext
 
@@ -78,4 +79,13 @@ NOT USED- add-dbContext
  4. Add Student and StudentCourse seed data
  5. Add appropriate migrations and update database
  6. Add unordered list of students to Courses details view
+ 
+ ## Add Students to Course Branch
+ 1. Add link from Course Details page to add a student for the given course
+ 2. Add StudentCourseRepository
+ 3. Add StudentCourseController with dependency injection
+ 4. Add scoping for dependency injection
+ 5. Add CreateByCourseId action and views for the StudentCourse model
+ 6. Add Create HttpPost action for the StudentCourse model
+ 7. Check if student is already enrolled in course before adding
  
