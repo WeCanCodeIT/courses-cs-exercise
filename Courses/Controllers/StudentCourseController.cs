@@ -27,7 +27,10 @@ namespace Courses.Controllers
         [HttpPost]
         public ActionResult Create(StudentCourse studentCourse)
         {
-            studentCourseRepo.Create(studentCourse);
+            if (!studentCourseRepo.IsStudentAlreadyEnrolled(studentCourse.CourseId, studentCourse.StudentId))
+            {
+                studentCourseRepo.Create(studentCourse);
+            }
             return RedirectToAction("Index", "Course");
         }
 

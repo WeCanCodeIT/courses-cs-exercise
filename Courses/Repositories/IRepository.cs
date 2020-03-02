@@ -12,6 +12,7 @@ namespace Courses.Repositories
         void Create(T obj);
         void Delete(T obj);
         //void Update(T obj);
+        bool IsStudentAlreadyEnrolled(int id1, int id2);
 
     }
 }

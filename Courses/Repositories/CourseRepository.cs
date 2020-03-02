@@ -36,5 +36,10 @@ namespace Courses.Repositories
         {
             return db.Courses.Single(c => c.Id == id);
         }
+
+        public bool IsStudentAlreadyEnrolled(int id1, int id2)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

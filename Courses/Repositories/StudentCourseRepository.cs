@@ -36,5 +36,10 @@ namespace Courses.Repositories
         {
             return db.StudentCourses.Single(c => c.Id == id);
         }
+
+        public bool IsStudentAlreadyEnrolled(int courseId, int studentId)
+        {
+            return db.StudentCourses.Any(c => c.CourseId == courseId & c.StudentId == studentId);
+        }
     }
 }
