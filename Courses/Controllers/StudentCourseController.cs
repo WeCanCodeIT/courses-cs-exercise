@@ -24,5 +24,12 @@ namespace Courses.Controllers
             return View();
         }
 
+        [HttpPost]
+        public ActionResult Create(StudentCourse studentCourse)
+        {
+            studentCourseRepo.Create(studentCourse);
+            return RedirectToAction("Index", "Course");
+        }
+
     }
 }
