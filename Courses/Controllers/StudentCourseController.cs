@@ -16,5 +16,13 @@ namespace Courses.Controllers
         {
             this.studentCourseRepo = studentCourseRepo;
         }
+
+        [HttpGet]
+        public ViewResult CreateByCourseId(int id)
+        {
+            ViewBag.CourseId = id;
+            return View();
+        }
+
     }
 }
