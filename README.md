@@ -66,11 +66,12 @@ NOT USED- add-dbContext
     * add a DbSet for Courses
     * define the connection string in OnConfiguring() method
     * add Seed Data in the OnModelCreating() method
- 3. Add a Migration
- 4. In CourseRepo, replace the courseList with UniversityContext
+ 3. Add service to Startup by using the AddDbContext<>() method for UniversityContext
+ 4. Add a Migration
+ 5. In CourseRepo, replace the courseList with UniversityContext
     * inject the db into the CourseRepo constructor
     * change all references in methods from courseList with db
- 5. If not already done, inject the CourseRepo into the CourseController and add scoping services
+ 6. If not already done, inject the CourseRepo into the CourseController and add scoping services
  
  ## Add Course Details View Branch
  1. Add GetById method to CourseController; 
