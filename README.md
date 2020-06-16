@@ -59,6 +59,15 @@ NOT USED- add-dbContext
  ## Add Entity Framework Branch
  
  ## Add Course Details View Branch
+ 1. Add GetById method to CourseController; 
+    * (courseRepo will have a red squiggle in new method; add reference from GetAll method into GetById method body tpo show it makes red squiggle go away, than refactor with just using a constructor in the public class;
+    * Add controller constructor (references "courseRepo") to make red squiggle go away 
+ 2. Add Details view inside Views/Course folder; (choose "view", then the template that's not empty, rename to "Details";
+    * add top line @model projectnameinlowercase.Models.Course to let our view know to use course model in our Models folder). 
+ 3. Comment out failing CourseControllerTests;
+ 4. Implement IRepository by adding : IRepository<yourmodelnameinuppercase>
+ 5. Change razor syntax in Index and Details views;
+ 6. Add DI to Startup file. 
  
  ## Add Instructor Model Branch
  
