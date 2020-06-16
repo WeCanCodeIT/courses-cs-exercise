@@ -67,7 +67,7 @@ NOT USED- add-dbContext
  3. Comment out failing CourseControllerTests;
  4. Implement IRepository by adding : IRepository<yourmodelnameinuppercase>
  5. Change razor syntax in Index and Details views;
- 6. Add DI to Startup file. 
+ 6. Add scoping for DI in Startup file. 
  
  ## Add Instructor Model Branch
  
