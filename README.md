@@ -6,11 +6,11 @@ The Courses project consists of a SQL database of courses and instructor tables 
 1. master
 2. add-model-test
 3. repository-pattern
-4. add-EF
-5. add-course-details-view
+4. add-EF (or 5. add-course-details-view)
+5. add-course-details-view (or 4. add-EF)
 6. add-instructor-model
-7. create-course
-8. add-instructor-controller
+7. create-course (or 8. add-instructor-controller)
+8. add-instructor-controller (or 7. create-course)
 9. course-delete
 10. controller-tests
 11. add-students
@@ -57,6 +57,20 @@ NOT USED- add-dbContext
  5. Modify CourseController and Index View to get all courses and show them in the View
  
  ## Add Entity Framework Branch
+ 1. Add EF Packages through Nuget Package Manager
+    * Microsoft.EntityFrameworkCore
+    * Microsoft.EntityFrameworkCore.Proxies
+    * Microsoft.EntityFrameworkCore.SqlServer
+    * Microsoft.EntityFrameworkCore.Tools
+ 2. Add a UniversityContext which inherits from DbContext
+    * add a DbSet for Courses
+    * define the connection string in OnConfiguring() method
+    * add Seed Data in the OnModelCreating() method
+ 3. Add a Migration
+ 4. In CourseRepo, replace the courseList with UniversityContext
+    * inject the db into the CourseRepo constructor
+    * change all references in methods from courseList with db
+ 5. If not already done, inject the CourseRepo into the CourseController and add scoping services
  
  ## Add Course Details View Branch
  1. Add GetById method to CourseController; 
