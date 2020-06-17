@@ -97,8 +97,18 @@ NOT USED- add-dbContext
  ## Create Course Branch
  
  ## Add Instructor Controller Branch
+ 1. Add Instructor Repository
+    * inject UniversityContext into constructor
+    * add interface implementation of methods
+ 2. Add InstructorController
+    * inject InstructorRepository into controller
+    * add an Index action to return a ViewResult
+ 3. Add scoping for Instructor Dependency Injection to startup
+ 4. Add Instructor Index view, with list of instructors
+ 5. Add links from Course List to Show All Instructors, and from Instructor List to Show All Courses
  
  ## Course Delete Branch
+ 
  ## Controller Test Branch
  1. Add NSubtitute dependency and a using statement to the test project
  2. In test constructor, use NSubstitute as a Substitute.For the repository
