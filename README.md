@@ -85,6 +85,14 @@ NOT USED- add-dbContext
  6. Add scoping for DI in Startup file. 
  
  ## Add Instructor Model Branch
+ 1. Add Instructor model with navigation properties creating 1:many relationshiop to Courses
+ 2. Add corresponding navigation properties in Course model
+ 3. Add DbSet to UniversityContext for Instructor model
+ 4. Add Instructor seed data to both the Instructor DbSet and the Course DbSet (reference to foreign key)
+ 5. Add a new migration and update database
+ 6. Add the instructor name to the Course Details view
+ 
+ NOTE: This workshop can be continued by adding a CourseLocation model with a one:one relationship to Course and a Student model with a many:many relationship to Course.
  
  ## Create Course Branch
  
