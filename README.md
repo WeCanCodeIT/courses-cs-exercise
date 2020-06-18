@@ -102,9 +102,12 @@ NOT USED- add-dbContext
     * add interface implementation of methods
  2. Add InstructorController
     * inject InstructorRepository into controller
-    * add an Index action to return a ViewResult
- 3. Add scoping for Instructor Dependency Injection to startup
+    * add using statements;
+    * implement base controller; 
+    * add an Index action to return a ViewResult;
+ 3. Add scoping for Instructor Dependency Injection to startup (Instructor Repositories)
  4. Add Instructor Index view, with list of instructors
+    *  add @model on line 1 but use Instructor Model at end
  5. Add links from Course List to Show All Instructors, and from Instructor List to Show All Courses
  
  ## Course Delete Branch
