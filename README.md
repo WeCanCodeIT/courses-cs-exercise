@@ -16,6 +16,9 @@ The Courses project consists of a SQL database of courses and instructor tables 
 11. add-students
 12. add-student-to-course
 
+## Potential Workshop Branches
+- Generic Repository Pattern
+
 NOT USED- add-dbContext
 
 ## Add Model Test Branch
@@ -134,3 +137,12 @@ NOT USED- add-dbContext
  6. Add Create HttpPost action for the StudentCourse model
  7. Check if student is already enrolled in course before adding
  
+## Generic Repository Pattern (branch does not exist in this workshop)
+1. Review current repository pattern with Interface and specific implementations of that interface for each model  
+1. Display CourseRepo and InstructorRepo side by side to identify duplication
+1. Describe purpose of a generic repository, to eliminate the duplication and create a generic version that can be inherited by a specific repository
+1. Add Repository layer, using generic <T> syntax
+1. Modify CourseRepo and InstructorRepo to inherit from Repository and implement IRepository
+1. Eliminate method implementation in both CourseRepo and InstructorRepo
+1. Update CourseRepo and InstructorRepo constructors to pass injected database to base (ie parent) constructor
+1. 
