@@ -18,6 +18,7 @@ The Courses project consists of a SQL database of courses and instructor tables 
 
 ## Potential Future Workshop Branches
 - Generic Repository Pattern
+- Select List Interface
 
 NOT USED- add-dbContext
 
@@ -145,3 +146,12 @@ NOT USED- add-dbContext
 1. Modify CourseRepo and InstructorRepo to inherit from Repository and implement IRepository
 1. Eliminate method implementation in both CourseRepo and InstructorRepo
 1. Update CourseRepo and InstructorRepo constructors to pass injected database to base (ie parent) constructor
+
+## Select List Interface (branch does not exist in this workshop)
+1. Goal: replace the hard coded Instructor lookup list used in Course Create action with a select list that has been generated from entities of the Instructor database, without breaking any SOLID rules or patterns!
+1. Create a new ISelectList interface with a new method, PopulateInstructorList(), that will implement code to fill a list with instructors
+1. Change IRepository layer to implement this new interface
+1. Add implementation in generic repository, but allow it to be overridden (ie, make virtual) and throw new NotImplementedException
+1. Add override implementation to the CourseRepository, where the method will be called.  Call upon the Instructors model to create a list of instructors
+1. In CourseController, call the PopulateInstructorList() in the Create action, and save the result in a ViewBag
+1. Replace hard coded instructor list in Course Create view with a foreach loop that iterates through the ViewBag list
