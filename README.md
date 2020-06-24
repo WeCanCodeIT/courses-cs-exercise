@@ -16,7 +16,7 @@ The Courses project consists of a SQL database of courses and instructor tables 
 11. add-students
 12. add-student-to-course
 
-## Potential Workshop Branches
+## Potential Future Workshop Branches
 - Generic Repository Pattern
 
 NOT USED- add-dbContext
